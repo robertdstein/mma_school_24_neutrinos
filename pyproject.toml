@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nuclass"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Robert Stein", email = "rdstein@caltech.edu"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Intended Audience :: Science/Research',
+    'Intended Audience :: End Users/Desktop',
+    'Intended Audience :: Developers',
+    'Natural Language :: English',
+    'Topic :: Scientific/Engineering',
+    'Topic :: Scientific/Engineering :: Astronomy',
+    'Topic :: Scientific/Engineering :: Physics',
+    'Operating System :: POSIX',
+    'Operating System :: Unix',
+    'Operating System :: MacOS',
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "jupyter",
+    "matplotlib",
+    "pandas",
+    "astropy"
+]
+
+[project.urls]
+Homepage = "https://github.com/robertdstein/mma_school_24_neutrinos"
+
+[tool.setuptools]
+packages = ["nuclass"]
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.format]
+max-line-length = "88"
+disable=["logging-fstring-interpolation"]
+good-names=["ax", "ra", "df", "pi", "i"]
+extension-pkg-whitelist=["extinction"]
