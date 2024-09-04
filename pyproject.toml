@@ -33,7 +33,10 @@ dependencies = [
     "jupyter",
     "matplotlib",
     "pandas",
-    "astropy"
+    "astropy",
+    "fastavro",
+    "tqdm",
+    "alerce"
 ]
 
 [project.urls]

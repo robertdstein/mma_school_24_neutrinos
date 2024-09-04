@@ -12,3 +12,8 @@ files_dir = data_dir / "data_files"
 
 icecat1_path = files_dir / "IceCube_Gold_Bronze_Tracks.csv"
 icecat1 = pd.read_csv(icecat1_path)
+
+icecat1_cut_path = files_dir / "icecat_cut.csv"
+icecat1_cut = pd.read_csv(icecat1_cut_path)
+
+
