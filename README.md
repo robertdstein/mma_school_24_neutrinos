@@ -7,8 +7,9 @@
     ```
     https://ztf.uw.edu/alerts/public/ztf_public_20191001.tar.gz 
     ```
+Also try downloading https://docs.anaconda.com/miniconda/
 
-The rest of the installation instructions assume you have anaconda installed ().
+The rest of the installation instructions assume you have anaconda installed.
 If not, you can either install it, or scroll down and use the docker instructions.
 
 1. Clone the repository
@@ -48,8 +49,29 @@ If not, you can either install it, or scroll down and use the docker instruction
    
 ## Alternative: Docker Instructions
 
+These instructions are similar to the Gamma exercises, but with a few modifications.
+
 1. Clone the repository
 
     ```bash
-    git clone
+    git clone git@github.com:robertdstein/mma_school_24_neutrinos.git
+   ```
    
+2. Move the ZTF data to the mma_school_24_neutrinos folder
+
+    ```bash
+    mv /path/to/ztf/data mma_school_24_neutrinos/data
+    ```
+   
+3. Build the docker image
+
+    ```bash
+   cd mma_school_24_neutrinos
+   docker build --platform linux/amd64 -t nuclass .
+   ```
+   
+4. Run the docker image
+
+    ```bash
+    docker run -p 8888:8888 -v $(pwd):/workspace nuclass
+    ```
