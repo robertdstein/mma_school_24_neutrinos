@@ -14,7 +14,7 @@ If not, you can either install it, or scroll down and use the docker instruction
 
 1. Clone the repository
     ```bash
-    git clone git@github.com:robertdstein/mma_school_24_neutrinos.git
+    git clone https://github.com/robertdstein/mma_school_24_neutrinos.git
     ```
 2.  Create a conda environment
 
@@ -54,7 +54,7 @@ These instructions are similar to the Gamma exercises, but with a few modificati
 1. Clone the repository
 
     ```bash
-    git clone git@github.com:robertdstein/mma_school_24_neutrinos.git
+    git clone https://github.com/robertdstein/mma_school_24_neutrinos.git
    ```
    
 2. Move the ZTF data to the mma_school_24_neutrinos folder
